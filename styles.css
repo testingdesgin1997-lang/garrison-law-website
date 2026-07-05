@@ -230,10 +230,9 @@ img { max-width: 100%; display: block; }
 /* ---------- Hero ---------- */
 .hero {
   background: var(--navy-bg);
-  padding: 90px 60px 110px;
+  padding: 80px 60px;
   position: relative;
   overflow: hidden;
-  min-height: 60vh;
   display: flex;
   align-items: center;
 }
@@ -281,6 +280,56 @@ img { max-width: 100%; display: block; }
   align-items: center;
   gap: 40px;
   flex-wrap: wrap;
+}
+
+/* ---------- Homepage practice preview ---------- */
+.home-preview {
+  background: var(--cream);
+  padding: 90px 60px 100px;
+  text-align: center;
+}
+.home-preview .eyebrow { justify-content: center; }
+.home-preview h2 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: 42px;
+  color: var(--heading-dark);
+  margin: 0 0 12px;
+}
+.home-preview-intro {
+  font-size: 15px;
+  color: #666;
+  margin: 0 auto 50px;
+}
+.home-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 36px;
+  text-align: left;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.home-preview-card {
+  background: #fff;
+  border-radius: 6px;
+  padding: 36px 32px;
+  box-shadow: 0 1px 3px rgba(24, 27, 60, 0.08);
+}
+.home-preview-card h3 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: 28px;
+  color: var(--heading-dark);
+  margin: 4px 0 14px;
+}
+.home-preview-card p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #555;
+  margin: 0 0 20px;
+}
+@media (max-width: 900px) {
+  .home-preview-grid { grid-template-columns: 1fr; }
 }
 
 /* ---------- Practice area sections ---------- */
