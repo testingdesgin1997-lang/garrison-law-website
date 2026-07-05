@@ -78,7 +78,7 @@ img { max-width: 100%; display: block; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 60px;
+  padding: 0;
 }
 
 .site-header .logo img {
@@ -90,6 +90,7 @@ img { max-width: 100%; display: block; }
   display: flex;
   align-items: center;
   gap: 32px;
+  padding-right: 24px;
 }
 
 .header-right .connect-link {
