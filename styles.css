@@ -182,6 +182,30 @@ img { max-width: 100%; display: block; }
   align-items: center;
 }
 .hero-inner { max-width: 700px; margin-left: auto; position: relative; z-index: 2; }
+.hero-flex {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+}
+.hero-flex .hero-inner { margin-left: 0; flex: 1 1 50%; }
+.hero-animation {
+  flex: 0 0 50%;
+  max-width: 620px;
+  height: 500px;
+  position: relative;
+  z-index: 1;
+}
+.hero-animation iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+@media (max-width: 900px) {
+  .hero-flex { flex-direction: column; }
+  .hero-animation { width: 100%; max-width: 100%; height: 320px; }
+}
 .hero h1 {
   font-family: var(--font-serif);
   font-weight: 500;
@@ -202,16 +226,6 @@ img { max-width: 100%; display: block; }
   align-items: center;
   gap: 40px;
   flex-wrap: wrap;
-}
-
-.wave-graphic {
-  position: absolute;
-  left: -80px;
-  bottom: 0;
-  width: 620px;
-  max-width: 55%;
-  opacity: 0.9;
-  z-index: 1;
 }
 
 /* ---------- Practice area sections ---------- */
