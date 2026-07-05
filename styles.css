@@ -122,9 +122,9 @@ img { max-width: 100%; display: block; }
 .mobile-menu {
   position: fixed;
   inset: 0;
-  background-color: var(--navy-deep);
+  background-color: #e3e3e3;
   background-image:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='500' height='260' viewBox='0 0 500 260'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='0.06' stroke-width='1.5'%3E%3Cpath d='M-20 230 C 80 230, 120 150, 220 150 S 360 30, 520 30'/%3E%3Cpath d='M-20 210 C 80 210, 120 130, 220 130 S 360 10, 520 10'/%3E%3Cpath d='M-20 190 C 80 190, 120 110, 220 110 S 360 -10, 520 -10'/%3E%3Cpath d='M-20 250 C 80 250, 120 170, 220 170 S 360 50, 520 50'/%3E%3Cpath d='M-20 170 C 80 170, 120 90, 220 90 S 360 -30, 520 -30'/%3E%3C/g%3E%3C/svg%3E");
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='500' height='260' viewBox='0 0 500 260'%3E%3Cg fill='none' stroke='%23000000' stroke-opacity='0.08' stroke-width='1.5'%3E%3Cpath d='M-20 230 C 80 230, 120 150, 220 150 S 360 30, 520 30'/%3E%3Cpath d='M-20 210 C 80 210, 120 130, 220 130 S 360 10, 520 10'/%3E%3Cpath d='M-20 190 C 80 190, 120 110, 220 110 S 360 -10, 520 -10'/%3E%3Cpath d='M-20 250 C 80 250, 120 170, 220 170 S 360 50, 520 50'/%3E%3Cpath d='M-20 170 C 80 170, 120 90, 220 90 S 360 -30, 520 -30'/%3E%3C/g%3E%3C/svg%3E");
   background-size: 700px 360px;
   background-repeat: repeat;
   background-position: center;
@@ -132,7 +132,7 @@ img { max-width: 100%; display: block; }
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  padding: 60px;
+  padding: 40px 60px 60px;
   overflow-y: auto;
   opacity: 0;
   visibility: hidden;
@@ -147,14 +147,23 @@ img { max-width: 100%; display: block; }
   transform: translateY(0);
   transition: opacity 0.45s ease-out, transform 0.45s ease-out, visibility 0s linear 0s;
 }
+.mobile-menu-top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+.mobile-menu-top .logo img {
+  height: 64px;
+  width: auto;
+}
 .mobile-menu-close {
-  align-self: flex-end;
   background: none;
   border: none;
-  color: var(--text-light);
+  color: var(--heading-dark);
   font-size: 28px;
   cursor: pointer;
-  margin-bottom: 40px;
 }
 .mobile-menu nav ul {
   display: flex;
@@ -167,7 +176,7 @@ img { max-width: 100%; display: block; }
 .mobile-menu nav ul li a {
   font-family: var(--font-serif);
   font-size: 36px;
-  color: var(--text-light);
+  color: var(--heading-dark);
   transition: color 0.3s ease;
 }
 .mobile-menu nav ul li a:hover,
@@ -205,7 +214,7 @@ img { max-width: 100%; display: block; }
   text-align: right;
 }
 .mobile-menu .sub-section h4 {
-  color: var(--gold);
+  color: #9c7538;
   font-size: 12px;
   letter-spacing: 1.7px;
   text-transform: uppercase;
@@ -213,17 +222,17 @@ img { max-width: 100%; display: block; }
 }
 .mobile-menu .sub-section a {
   display: block;
-  color: var(--text-muted);
+  color: #555;
   font-size: 15px;
   margin-bottom: 10px;
   transition: color 0.3s ease;
 }
 .mobile-menu .sub-section a:hover,
 .mobile-menu .sub-section a:focus-visible {
-  color: var(--text-light);
+  color: var(--heading-dark);
 }
 .mobile-menu .contact-line {
-  color: var(--text-muted);
+  color: #555;
   font-size: 14px;
   margin-bottom: 8px;
 }
