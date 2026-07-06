@@ -18,6 +18,22 @@
 
 * { box-sizing: border-box; }
 
+/* Page transition cover: opaque on load, fades away to reveal the
+   page; brought back to opaque before following a menu link so the
+   next page appears to fade in rather than snap into view. */
+.page-transition {
+  position: fixed;
+  inset: 0;
+  background: var(--navy-deep);
+  z-index: 500;
+  opacity: 1;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+.page-transition.is-hidden {
+  opacity: 0;
+}
+
 html { scroll-behavior: smooth; }
 
 body {
@@ -405,12 +421,27 @@ img { max-width: 100%; display: block; }
 }
 
 /* ---------- Team grid ---------- */
-.team-grid {
+.team-page {
   background: #fff;
-  padding: 80px 60px 100px;
+}
+.team-tier {
+  padding: 60px 60px 0;
+}
+.team-tier:last-child {
+  padding-bottom: 100px;
+}
+.team-tier-label {
+  margin-bottom: 30px;
+}
+.team-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   gap: 50px 40px;
+}
+.team-grid-lawyers {
+  grid-template-columns: repeat(2, minmax(0, 240px));
+}
+.team-grid-clerks {
+  grid-template-columns: repeat(5, 1fr);
 }
 .team-card img {
   width: 100%;
@@ -567,12 +598,16 @@ img { max-width: 100%; display: block; }
   .practice-section { padding: 60px 24px; }
   .practice-text h2 { font-size: 34px; }
   .checklist { grid-template-columns: 1fr; }
-  .team-grid { grid-template-columns: repeat(2, 1fr); padding: 60px 24px 80px; }
+  .team-tier { padding: 60px 24px 0; }
+  .team-tier:last-child { padding-bottom: 80px; }
+  .team-grid-lawyers { grid-template-columns: repeat(2, minmax(0, 200px)); }
+  .team-grid-clerks { grid-template-columns: repeat(3, 1fr); }
   .connect-wrap { padding: 60px 24px 90px; }
   .form-grid { grid-template-columns: 1fr; }
   .site-footer { padding: 50px 24px 24px; }
   .footer-top { grid-template-columns: 1fr; }
 }
 @media (max-width: 560px) {
-  .team-grid { grid-template-columns: 1fr; }
+  .team-grid-lawyers { grid-template-columns: repeat(2, 1fr); }
+  .team-grid-clerks { grid-template-columns: repeat(2, 1fr); }
 }
